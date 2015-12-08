@@ -1,0 +1,24 @@
+<table class='table'>
+	<thead>
+		<tr>
+			<!-- <th></th> -->
+			<th>Name</th>
+			<th>Artists</th>
+			<th>Genres</th>
+		</tr>
+	</thead>
+	<tbody>
+	<!-- what we are changing each time is 'list' so we get album.songs, artist.songs, & playlist.songs -->
+		<tr ng-repeat="song in list.songs" ng-class="{active: isCurrent(song)}" double-click="start(song)">
+<!-- 			<td>
+				<button ng-hide="isCurrent(song)" ng-click="start(song)" class="btn btn-default btn-xs">
+					<span class="glyphicon glyphicon-play"></span>
+				</button>
+			</td> -->
+			<!-- <td></td> -->
+			<td>{{ song.name }}</td>
+			<td><span ng-repeat="artist in song.artists">{{ artist.name }} </span></td>
+			<td>{{ song.genres.join(', ') }}</td>
+		</tr>
+	</tbody>
+</table>

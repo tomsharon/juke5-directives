@@ -6,8 +6,8 @@ app.directive("albumList", function(AlbumFactory, ArtistFactory) {
 			albums: "="
 		},
 		link: function(scope, element, attrs) {
-			console.log("THIS IS THE SCOPE FROM albumList Directive", scope)
-			console.log("This is attrs:", attrs)
+			// console.log("THIS IS THE SCOPE FROM albumList Directive", scope)
+			// console.log("This is attrs:", attrs)
 		}			
 	}
 })
